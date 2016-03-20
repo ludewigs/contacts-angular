@@ -1,0 +1,14 @@
+<div class="errorBox" ng-show="error">{{ error }}</div>
+
+<div>
+	<form>
+		<label for="name">Name</label>
+		<input class="form-control input-sm" type="text" name="name" ng-model="details.name">
+		<label for="username">username</label>
+		<input class="form-control input-sm" type="text" name="username" ng-model="details.username">
+		<label for="email">email</label>
+		<input class="form-control input-sm" type="text" name="email" ng-model="details.email">
+		<br>
+		<button class="btn btn-primary form-control" ng-click="saveUser(details)">SAVE</button>
+	</form>
+</div>

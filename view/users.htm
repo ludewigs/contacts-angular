@@ -1,0 +1,46 @@
+<table class="table table-striped table-bordered">
+	<thead>
+		<th>Name</th>
+		<th>user</th>
+		<th>email</th>
+	</thead>
+	<tbody ng-repeat="user in users">
+		<tr>
+			<td><a href ng-click="showDetails = !showDetails">{{user.name}}</a></td>
+			<td>{{user.username}}</td>
+			<td>{{user.email}}</td>
+		</tr>
+		<tr ng-if="showDetails" class="fader">
+			<td colspan="3">
+				<div class="detailsTitle">
+					Details
+					<div style="position:absolute; top:4px; right:10px">
+						<a href="#/editUser:{{user.id}}" class="btn btn-primary btn-xs">Edit</a>
+					</div>
+				</div>
+				<div class="detailsContainer">
+					<div class="detailsData">
+						<dl>
+							<dt>Phone</dt>
+							<dd>{{user.phone}}</dd>
+							<dt>website</dt>
+							<dd><a href="http://{{user.website}}" target="_blank">http://{{user.website}}</a></dd>
+							<dt>Company</dt>
+							<dd>{{user.company.name}}</dd>
+						</dl>
+					</div>
+					<div class="detailsAddress">
+						<dl>
+							<dt>Address</dt>
+							<dd>{{user.address.street}}<br>
+								{{user.address.suite}}<br>
+								{{user.address.city}}<br>
+								{{user.address.zipcode}}
+							</dd>
+						</dl>
+					</div>
+				</div>
+			</td>
+		</tr>
+	</tbody>
+</table>
