@@ -1,2 +1,1 @@
-var app = angular.module("rest", ["ngRoute", "ngAnimate"]);
-
+var app = angular.module('contacts', ['ngRoute', 'ngAnimate'])
